@@ -53,6 +53,6 @@ export const cartSlice = createSlice({
         increaseCount,
         decreaseCount,
         setIsCartOpen,
-    } = cartSlice.actions;
+    } = cartSlice.actions; 
 
     export default cartSlice.reducer;
