@@ -1,11 +1,11 @@
- 
- const Home = () => {
-   return (
-     <div>
-       Home
-     </div>
-   )
- }
- 
- export default Home
- 
+import MainCarousel from "./MainCarousel";
+
+const Home = () => {
+  return (
+    <div className="home">
+      <MainCarousel />
+    </div>
+  );
+};
+
+export default Home;

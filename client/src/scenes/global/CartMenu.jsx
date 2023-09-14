@@ -104,7 +104,7 @@ const CartMenu = () => {
                             dispatch(increaseCount({ id: item.id }))
                           }
                         >
-                          <addIcon />
+                          <AddIcon />
                         </IconButton>
                       </Box>
                     </FlexBox>
