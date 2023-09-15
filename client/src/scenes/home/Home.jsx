@@ -1,4 +1,4 @@
-import MainCarousel from "./MainCarousel";
+import MainCarousel from './MainCarousel';
 
 const Home = () => {
   return (
