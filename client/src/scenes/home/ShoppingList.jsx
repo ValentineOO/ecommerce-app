@@ -4,8 +4,6 @@ import { Box, Typography, Tab, Tabs, useMediaQuery } from "@mui/material";
 import Item from "../../components/Item";
 import { setItems } from "../../state";
 
-   
-
 const ShoppingList = () => {
   const dispatch = useDispatch();
   const [value, setValue] = useState("all");
@@ -28,11 +26,11 @@ const ShoppingList = () => {
 
   useEffect(() => {
     getItems();
-  }, []);
+  }, []); //eslint-disable-line react-hooks/exhaustive-deps
 
   const topRatedItems = items.filter(
     (item) => item.attributes.category === "topRated"
-  ); 
+  );
   const newArrivalsItems = items.filter(
     (item) => item.attributes.category === "newArrivals"
   );
