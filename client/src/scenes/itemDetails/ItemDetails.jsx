@@ -24,17 +24,20 @@ const ItemDetails = () => {
   async function getItem() {
     const item = await fetch(
       `http://localhost:1337/api/items/${itemId}?populate=image`,
-      { method: "GET", }
+      {
+        method: "GET",
+      }
     );
-
     const itemJson = await item.json();
     setItem(itemJson.data);
   }
 
   async function getItems() {
     const items = await fetch(
-      "http://localhost:1337/api/items?populate=image",
-      { method: "GET" }
+      `http://localhost:1337/api/items?populate=image`,
+      {
+        method: "GET",
+      }
     );
     const itemsJson = await items.json();
     setItems(itemsJson.data);
@@ -65,6 +68,7 @@ const ItemDetails = () => {
             <Box>Home/Item</Box>
             <Box>Prev Next</Box>
           </Box>
+
           <Box m="65px 0 25px 0">
             <Typography variant="h3">{item?.attributes?.name}</Typography>
             <Typography>${item?.attributes?.price}</Typography>
@@ -72,14 +76,13 @@ const ItemDetails = () => {
               {item?.attributes?.longDescription}
             </Typography>
           </Box>
-
-          {/* COUNT AND BUTTON */}
+              {/* COUNT AND BUTTON */}
           <Box display="flex" alignItems="center" minHeight="50px">
             <Box
               display="flex"
               alignItems="center"
               border={`1.5px solid ${shades.neutral[300]}`}
-              mr="20px" //5px
+              mr="20px"
               p="2px 5px"
             >
               <IconButton onClick={() => setCount(Math.max(count - 1, 1))}>
@@ -98,12 +101,11 @@ const ItemDetails = () => {
                 minWidth: "150px",
                 padding: "10px 40px",
               }}
-              onclick={() => dispatch(addToCart({ item: { ...item, count } }))}
+              onClick={() => dispatch(addToCart({ item: { ...item, count } }))}
             >
               ADD TO CART
             </Button>
           </Box>
-
           <Box>
             <Box m="20px 0 5px 0" display="flex">
               <FavoriteBorderOutlinedIcon />
