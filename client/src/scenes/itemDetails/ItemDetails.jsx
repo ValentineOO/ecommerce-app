@@ -76,7 +76,7 @@ const ItemDetails = () => {
               {item?.attributes?.longDescription}
             </Typography>
           </Box>
-              {/* COUNT AND BUTTON */}
+          {/* COUNT AND BUTTON */}
           <Box display="flex" alignItems="center" minHeight="50px">
             <Box
               display="flex"
