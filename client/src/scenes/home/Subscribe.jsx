@@ -8,7 +8,7 @@ const Subscribe = () => {
   return (
     <Box width="80%" margin="80px auto" textAlign="center">
       <IconButton>
-        <MarkEmailReadOutlinedIcon fontsize="large" />
+        <MarkEmailReadOutlinedIcon fontSize="large" />
       </IconButton>
       <Typography variant="h3">Subscribe To Our Newsletter</Typography>
       <Typography>
