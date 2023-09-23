@@ -20,7 +20,7 @@ const Footer = () => {
         <Box width="clamp(20%, 30%, 40%)">
           <Typography
             variant="h4"
-            fontweight="bold"
+            fontWeight="bold"
             mb="30px"
             color={shades.secondary[500]}
           >
@@ -34,7 +34,7 @@ const Footer = () => {
           </div>
         </Box>
         <Box>
-          <Typography variant="h4" fontweight="bold" mb="30px">
+          <Typography variant="h4" fontWeight="bold" mb="30px">
             About Us
           </Typography>
           <Typography mb="30px">Careers</Typography>
@@ -44,7 +44,7 @@ const Footer = () => {
         </Box>
 
         <Box>
-          <Typography variant="h4" fontweight="bold" mb="30px">
+          <Typography variant="h4" fontWeight="bold" mb="30px">
             Customer Care
           </Typography>
           <Typography mb="30px">Help Center</Typography>
@@ -54,7 +54,7 @@ const Footer = () => {
         </Box>
 
         <Box width="clamp(20%, 25%, 30%)">
-          <Typography variant="h4" fontweight="bold" mb="30px">
+          <Typography variant="h4" fontWeight="bold" mb="30px">
             Contact Us
           </Typography>
           <Typography mb="30px">

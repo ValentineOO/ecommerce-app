@@ -18,7 +18,7 @@ const Shipping = ({
         </Typography>
         <AddressForm
           type="billingAddress"
-          value={values.billingAddress}
+          values={values.billingAddress}
           errors={errors}
           touched={touched}
           handleBlur={handleBlur}
@@ -31,8 +31,8 @@ const Shipping = ({
           control={
             <Checkbox
               defaultChecked
-              value={values.shippingAddress.isSameAddress}
-              onchange={() =>
+              values={values.shippingAddress.isSameAddress}
+              onChange={() =>
                 setFieldValue(
                   "shippingAddress.isSameAddress",
                   !values.shippingAddress.isSameAddress
@@ -49,15 +49,15 @@ const Shipping = ({
             Billing Information
           </Typography>
           <AddressForm
-          type="shippingAddress"
-          value={values.shippingAddress}
-          errors={errors}
-          touched={touched}
-          handleBlur={handleBlur}
-          handleChange={handleChange}
-        />
+            type="shippingAddress"
+            values={values.shippingAddress}
+            errors={errors}
+            touched={touched}
+            handleBlur={handleBlur}
+            handleChange={handleChange}
+          />
         </Box>
-      )} 
+      )}
     </Box>
   );
 };
