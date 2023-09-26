@@ -30,7 +30,7 @@ const CartMenu = () => {
   }, 0);
 
   return (
-    <Box // overlay
+    <Box
       display={isCartOpen ? "block" : "none"}
       backgroundColor="rgba(0, 0, 0, 0.4)"
       position="fixed"
@@ -41,7 +41,6 @@ const CartMenu = () => {
       top="0"
       overflow="auto"
     >
-      {/* MODAL */}
       <Box
         position="fixed"
         right="0"
@@ -53,7 +52,7 @@ const CartMenu = () => {
         <Box padding="30px" overflow="auto" height="100%">
           {/* HEADER */}
           <FlexBox mb="15px">
-            <Typography variant="h3">SHOPPING BAG ({cart.length})</Typography>{" "}
+            <Typography variant="h3">SHOPPING BAG ({cart.length})</Typography>
             <IconButton onClick={() => dispatch(setIsCartOpen({}))}>
               <CloseIcon />
             </IconButton>
@@ -73,7 +72,6 @@ const CartMenu = () => {
                     />
                   </Box>
                   <Box flex="1 1 60%">
-                    {/* ITEM NAME */}
                     <FlexBox mb="5px">
                       <Typography fontWeight="bold">
                         {item.attributes.name}
@@ -89,8 +87,13 @@ const CartMenu = () => {
                     <Typography>{item.attributes.shortDescription}</Typography>
 
                     {/* AMOUNT */}
+
                     <FlexBox m="15px 0">
-                      <Box border={`1.5px solid ${shades.neutral[500]}`}>
+                      <Box
+                        display="flex"
+                        alignItems="center"
+                        border={`1.5px solid ${shades.neutral[500]}`}
+                      >
                         <IconButton
                           onClick={() =>
                             dispatch(decreaseCount({ id: item.id }))
@@ -107,10 +110,11 @@ const CartMenu = () => {
                           <AddIcon />
                         </IconButton>
                       </Box>
+                      <Typography fontWeight="bold">
+                        ${item.attributes.price}
+                      </Typography>
                     </FlexBox>
                   </Box>
-                  {/* PRICE */}
-                  <Typography>${item.attributes.price}</Typography>
                 </FlexBox>
                 <Divider />
               </Box>
@@ -145,5 +149,4 @@ const CartMenu = () => {
     </Box>
   );
 };
-
 export default CartMenu;
